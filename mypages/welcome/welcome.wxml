@@ -1,0 +1,49 @@
+<!--<view bindtap="countClick">我是CLICK页面，你点击了{{count}}次</view>-->
+<!-- 作为内容-->
+<!-- <view>{{content}}</view>-->
+<!-- 作为组件属性-->
+<!-- <view id="item-{{id}}" style="border:{{border}}">作为属性渲染</view>-->
+<!-- 作为控制属性-->
+<!-- <view wx:if="{{showContent}}">作为属性渲染</view>-->
+<!-- 关键字-->
+<!--<view>{{2}}</view>
+<checkbox checked="{{false}}"></checkbox>-->
+<!-- 三元表达式-->
+<!--<view>{{showContent ? '显示文本':'不显示文本'}}</view>
+<!-- 算术运算符-->
+<!--<view>{{num1+num2}}+1+{{num3}}= ?</view>
+<!-- 字符串运算-->
+<!--<view>{{"name:"+name}}</view>
+<!-- 逻辑判断-->
+<!--<view>{{num3>0}}</view>
+<!-- 数据路径运算-->
+<!--<view>{{myObject.age}}{{myArray[1]}}</view>
+<!-- 数组组合-->
+<!--<view>{{ [myValue,2,3,'stringt'] }}</view>
+<!-- 数据注入模板-->
+<!-- <template is="testTemp" data="{{ name:myValue1,age:myValue2}}"></template>-->
+<!-- 作为控制属性-->
+<!--<view wx:for="{{myArray}}">
+	{{index}}:{{item}}
+</view>
+<view wx:for="{{myArray1}}" wx:for-index="myIndex" wx:for-item="myItem">
+	{{myIndex}}:{{myItem.name}}
+	</view>
+<view wx:for="{{myArray2}}" wx:for-index="myIndex" wx:for-item="myItem">
+	<block wx:for="{{myItem}}" wx:for-index="subIndex" wx:for-item="subItem">
+	{{subItem}}
+  </block>
+</view>
+<view bindtap="myevent">来了</view>-->
+<view>
+	<image src="../../images/jcLOGO.png" mode='aspectFit'></image>
+</view>
+<view class="section">
+	<input class='input' placeholder='请输入手机号' bindinput='inputName' type="number"></input>
+</view>
+<view class="section">
+	<input class='input' placeholder='请输入密码' bindinput='inputPassword' password='false'></input>
+</view>
+<view style="display:flex;justfy-content:center">
+	<button bindtap="dlClick" size='mini' class='btnClass'>登录</button>
+</view>

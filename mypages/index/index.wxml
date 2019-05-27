@@ -1,0 +1,47 @@
+<view class="index page">
+  <view class="header border-t border-b">
+    <view class="header-left header-btn" bindtap="cancelTask"></view>
+  <view class="header-center header-btn"></view>
+  <view class="header-right " bindtap="addTask"></view>
+  </view>	
+      <view class="todayWrapper"  >
+        <view class="left">
+          <view class="date">{{selectDate.date}}</view>
+          <view class="center">
+            <view class="weekDay">星期{{days[selectDate.weekDay]}}</view>
+            <view class="month">{{selectDate.month+1}}月</view>
+          </view>
+        </view>
+        <view class="right">
+          <view class="goDayTaskBtn" bindtap="goDayTask" data-ms="{{selectDate.ms}}">SCHEDULE</view>
+        </view>
+    </view>
+</view>
+<!--       <view class="taskList">
+        <block wx:if="{{groupTask.curList.length>0}}">
+          <view class="current task-group">
+            <block wx:for="{{groupTask.curList}}" wx:key="key" wx:for-index="taskIdx" wx:for-item="taskItem">
+              <view data-status="current" data-key="{{taskItem.key}}" bindtap="selectTask" class="task-block {{taskIdx < groupTask.curList.length-1?'border-b':''}}">
+                <view class="task-info">
+                  <view class="end-time ">结束</view>
+                  <view class="title">{{taskItem.title}}</view>
+                  <view class="important {{taskItem.important==='一般'?'important_0':'important_1'}}">{{taskItem.important}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </block>
+        <block wx:if="{{groupTask.penList.length>0}}">
+          <view class="pending task-group">
+            <block wx:for="{{groupTask.penList}}" wx:key="key" wx:for-index="taskIdx" wx:for-item="taskItem">
+              <view data-status="pending" data-key="{{taskItem.key}}" bindtap="selectTask" class="task-block {{taskIdx < groupTask.penList.length-1?'border-b':''}}">
+                <view class="task-info">
+                  <view class="start-time">开始{{taskItem.startTime}}</view>
+                  <view class="title">{{taskItem.title}}</view>
+                  <view class="important {{taskItem.important==='一般'?'important_0':'important_1'}}">{{taskItem.important}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </block>
+       </view>-->

@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "mypages/welcome/welcome",
+    "mypages/index/index",
+    "mypages/process/process",
+    "mypages/humancenter/center",
+    "mypages/daytask/daytask",
+    "mypages/create/create",
+    "mypages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#111faa",
+    "navigationBarTitleText": "俊采宅电",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath": "images/任务.jpg",
+        "selectedIconPath": "images/任务1.png",
+        "pagePath": "mypages/index/index",
+        "text": "我的任务"
+      },
+      {
+        "iconPath": "images/业务.png",
+        "selectedIconPath": "images/业务1.png",
+        "pagePath": "mypages/process/process",
+        "text": "业务处理"
+      },
+      {
+        "iconPath": "images/个人.jpg",
+        "selectedIconPath": "images/个人1.jpg",
+        "pagePath": "mypages/humancenter/center",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

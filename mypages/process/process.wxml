@@ -1,0 +1,192 @@
+<view style="display:flex;flex-direction:column">
+	<view class="rongqi">
+		<view class="navBtn" bindtap="toDayTask">
+			<image src="../../images/liebiao.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">日程安排</text>
+		</view>
+		<view class="navBtn" bindtap="powerDrawer" data-statu="open">
+			<image src="../../images/shejishi.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">新增渠道</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/baifang.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">渠道拜访</text>
+		</view>
+	</view>
+	<view class="rongqi">
+		<view class="navBtn" bindtap="powerDrawer1" data-statu="open">
+			<image src="../../images/xinkehu.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">新增客户</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/kehugenzong.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">客户跟踪</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/xuqiuzl.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">需求整理</text>
+		</view>
+	</view>
+	<view class="rongqi">
+		<view class="navBtn">
+			<image src="../../images/yuyue.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">到店预约</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/chengjiao.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">成交确认</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/jishujd.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">技术交底</text>
+		</view>
+	</view>	
+	
+	<view class="rongqi">
+		<view class="navBtn">
+			<image src="../../images/xianchangfh.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">现场复核</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/anzhuang.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">安装预约</text>
+		</view>
+		<view class="navBtn">
+			<image src="../../images/gzhb.jpg" class="navBtn-image"></image>
+			<text class="navBtn-text">工作汇报</text>
+		</view>
+	</view>		
+</view>
+<!--mask-->  
+
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>  
+
+<!--content-->  
+
+<!--使用animation属性指定需要执行的动画-->  
+
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">  
+
+  
+<form bindsubmit="submit">
+  <!--drawer content-->  
+
+  <view class="drawer_title">渠道登记</view>  
+
+  <view class="drawer_content">  
+
+    <view class="top grid">  
+
+      <label class="title col-0">姓名</label>  
+
+      <input class="input_base input_h30 col-1" name="rName" placeholder="设计师爸爸"></input>  
+
+    </view>  
+
+    <view class="top grid">  
+
+      <label class="title col-0">手机号</label>  
+
+      <input class="input_base input_h30 col-1" name="mobile" placeholder="13838389438" type="number"></input>  
+
+    </view>  
+
+    <view class="top grid">  
+
+      <label class="title col-0">所属公司</label>  
+
+      <input class="input_base input_h30 col-1" name="company" placeholder="个人工作室"></input>  
+
+    </view>  
+
+    <view class="top grid">  
+
+      <label class="title col-0">个人爱好</label>  
+
+      <input class="input_base input_h30 col-1" name="hobbie" placeholder="见到美女流口水"></input>  
+
+    </view>  
+
+    <view class="top bottom grid">  
+
+      <label class="title col-0">备注</label>  
+
+      <input class="input_base input_h30 col-1" name="bz" placeholder="风格，档次等"></input>  
+
+    </view>  
+
+  </view>  
+	<view class="rongqi1">
+  	<button class="btn_ok" form-type="submit" data-statu="close">确定</button> 
+  	<button class="btn_ok" bindtap="powerDrawer" data-statu="close">取消</button>  
+	</view>
+</form>
+</view>
+
+<view class="drawer_screen" bindtap="powerDrawer1" data-statu="close" wx:if="{{showModalStatus1}}"></view>  
+
+<!--content-->  
+
+<!--使用animation属性指定需要执行的动画--> 
+
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus1}}">  
+
+  
+<form bindsubmit="submit">
+  <!--drawer content-->  
+
+  <view class="drawer_title">项目登记</view>  
+
+  <view class="drawer_content">  
+
+    <view class="top grid">  
+
+      <label class="title col-0">客户姓名</label>  
+
+      <input class="input_base input_h30 col-1" name="rName" placeholder="客户爸爸"></input>  
+
+    </view>  
+
+    <view class="top grid">  
+
+      <label class="title col-0">手机号</label>  
+
+      <input class="input_base input_h30 col-1" name="mobile" placeholder="13838389438" type="number"></input>  
+
+    </view>  
+
+    <view class="top grid">  
+
+      <label class="title col-0">项目地址</label>  
+
+      <input class="input_base input_h30 col-1" name="address" placeholder="广汉自建别墅"></input>  
+
+    </view>  
+
+    <view class="top grid">  
+
+      <label class="title col-0">渠道</label>  
+			<picker value="{{index}}" range="{{chanelname}}" bindchange="changePicker">
+				<view>
+					{{chanelname[index]}}
+				</view>
+			</picker>
+<!--      <input class="input_base input_h30 col-1" name="chanel" placeholder="王大锤"></input>  -->
+
+    </view>  
+
+    <view class="top bottom grid">  
+
+      <label class="title col-0">备注</label>  
+
+      <input class="input_base input_h30 col-1" name="bz" placeholder="风格，档次等"></input>  
+
+    </view>  
+
+  </view>  
+	<view class="rongqi1">
+  	<button class="btn_ok" form-type="submit" data-statu="close">确定</button> 
+  	<button class="btn_ok" bindtap="powerDrawer1" data-statu="close">取消</button>  
+	</view>
+</form>
+</view>
